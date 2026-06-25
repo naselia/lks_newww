@@ -6,8 +6,6 @@ resource "aws_s3_bucket" "transaction_bucket" {
   bucket        = "sistemtoko-datalake-nasel"
   force_destroy = true                               
 }
-
-# Membuat Folder "raw-transaction" di S3
 resource "aws_s3_object" "folder_raw" {
   bucket       = aws_s3_bucket.transaction_bucket.id
   key          = "raw-transaction/year=2026/"
