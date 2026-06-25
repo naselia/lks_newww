@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "transaction_bucket" {
 # Membuat Folder "raw-transaction" di S3
 resource "aws_s3_object" "folder_raw" {
   bucket       = aws_s3_bucket.transaction_bucket.id
-  key          = "raw-transaction/"
+  key          = "raw-transaction/year=2026/"
   content_type = "application/x-directory"
 }
 
